@@ -1,0 +1,26 @@
+Arquivo de Ativações Detectadas
+
+<data> <hora> <ident-decimal> <estado> <nro de ativações>
+
+<data>: representa a data da ativação (ou da primeira ativação de um grupo de ativações) no formato aaaammdd.
+
+<hora>: representa a hora da ativação (ou da primeira ativação de um grupo de ativações) no formato hhmmssiii.
+
+<ident-decimal>: representa o código decimal resultante da soma do código do sensor e do seu estado.
+
+<estado>: representa o estado do sensor, conforme o arquivo de estado dos sensores.
+
+<nro de ativações>: representa o número total de ativações que foram recebidas (lembre-se que ativações com horas de chegada separadas por menos do que 4 segundos correspondem
+ao mesmo evento que ativou o sensor). 
+
+Arquivo de Ativações Válidas
+
+Este arquivo possui o mesmo leiaute do arquivo de ativações detectadas, mas com somente as ativações dos sensores instalados. 
+
+Arquivo de Sequências Detectadas
+
+<data 1> <hora 1> <data 2> <hora 2> <data 3> <hora3> 
+
+<data>: representa a data da ativação no formato aaaammdd de cada sensor da sequência.
+
+<hora>: representa a hora da no formato hhmmssiii de cada sensor da sequência 

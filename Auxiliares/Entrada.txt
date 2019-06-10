@@ -1,0 +1,48 @@
+X10Map.txt 
+armazena os dados dos sensores de movimentos e de portas válidos 
+<identificação> <código> <tipo> 
+
+<identificação>: cadeia de 4 caracteres (representando um número em hexadecimal) que identifica o sensor.
+
+<código>: representa o código numérico do sensor (inteiro). Este número somado com o número do estado do sensor define a identificação decimal do sensor.
+
+<tipo>: representa o tipo do sensor (caractere): M para sensor
+de movimento e P para sensor de portas. 
+
+X10OnOff.txt 
+Armazena os códigos para os estados dos sensores. Cada linha representa um tipo de estado com as seguintes informações 
+
+<identificação> <código> <tipo> 
+
+<identificação>: cadeia de 4 caracteres (representando um número em hexadecimal) que identifica o estado do sensor. Este valor sempre segue a identificação do sensor (conforme exemplo
+do arquivo de ativações).
+
+<código>: representa o código numérico do estado (inteiro). Este número somado com o número do sensor (segunda coluna do arquivo de sensores) define a identificação decimal do sensor.
+
+<tipo>: representa o estado do sensor (caractere). No caso do sensor de movimento, 1 para ativado e 0 para desativado. No caso do sensor de portas, 1 para fechada e 0 para aberta. 
+
+
+Arquivo de Ativações
+
+<número sequencial> <data> <hora> <sinal do sensor> 
+
+<número sequencial>: este número é utilizado para garantir que as ativações estão sendo recebida na sequência correta. Este número será ignorado neste trabalho.
+
+<data>: representa a data da ativação no formato aaaammdd (por exemplo: 20061030 representa 30 de outubro de 2006). 
+
+<hora>: representa a hora da ativação no formato hhmmssiii, onde i representa milissegundos (por exemplo: 143040333 representa 14 horas, 30 minutos, 40 segundos e 333
+milissegundos)
+
+<sinal do sensor>: uma cadeia de 4 caracteres que identifica o sensor que gerou a ativação ou o tipo de sinal (isto é, ligado desligado). Estes sinais estarão armazenados em 2 arquivos diferentes: um para as identidades dos sensores e outros para o estado dos sensores 
+
+
+
+Arquivo de Sensores Instalados
+
+<código> <sequência> 
+
+<código>: representa o código numérico do sensor (inteiro).Este número somado com o número do estado do sensor define a identificação decimal do sensor.
+
+<sequência>: define se o sensor está na sequência de sensores de interesse através da sua posição na sequência (valores de 1 a3). Caso o sensor não pertencer a sequência, este campo terá o
+valor 0. 
+
